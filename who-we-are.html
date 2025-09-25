@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Expedition Collective</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="who-we-are-page">
+  <!-- Header -->
+  <header class="header">
+      <div class="hamburger-menu" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+      <div class="logo">
+          <div class="logo-wrapper" id="logoWrapper">
+              <img src="images/image1.png" class="logotype" id="logotype" alt="Logotype">
+              <img src="images/image2.png" class="monogram" id="monogram" alt="Monogram">
+          </div>
+      </div>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+      <div class="sidebar-content">
+          <button class="close-btn" id="close-sidebar">&times;</button>
+          <div class="sidebar-logo">
+              <h2>The Expedition Collective</h2>
+          </div>
+          <nav class="sidebar-nav">
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="who-we-are.html">Who We Are</a></li>
+                  <li><a href="upcoming.html">Upcoming Expeditions</a></li>
+                  <li><a href="ganga.html">Frames of the Ganges</a></li>
+                  <li><a href="connect.html">Connect</a></li>
+              </ul>
+          </nav>
+          <div class="social-icons">
+              <a href="#" class="social-icon instagram">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                          d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+              </a>
+              <a href="#" class="social-icon facebook">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                          d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+              </a>
+              <a href="#" class="social-icon twitter">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                          d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                  </svg>
+              </a>
+              <a href="#" class="social-icon linkedin">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                          d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+              </a>
+              <a href="#" class="social-icon youtube">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                          d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                  </svg>
+              </a>
+              <a href="#" class="social-icon tiktok">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                          d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                  </svg>
+              </a>
+          </div>
+      </div>
+  </div>
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <section class="who-we-are-hero">
+      <div class="who-we-are-hero-content">
+          <!-- Hero Video Section -->
+          <div class="video-container">
+              <video id="hoverVideo" src="videos/video1.mp4" muted></video>
+              <button id="resetButton" class="reset-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 512 512" fill="#fff">
+                      <path
+                          d="M256 48C141.1 48 48 141.1 48 256H0l80 96 80-96H96c0-88.4 71.6-160 160-160s160 71.6 160 160-71.6 160-160 160c-43.3 0-82.4-17.1-111.3-44.9l-33.6 33.6C162.1 445.8 206.9 464 256 464c114.9 0 208-93.1 208-208S370.9 48 256 48z" />
+                  </svg>
+              </button>
+          </div>
+
+          <div class="hero-poetry">
+              <p class="poetry-line">Be it the rush of rivers born in the Himalayas,</p>
+              <p class="poetry-line">Or the echoes of prayers along Varanasi's ghats,</p>
+              <p class="poetry-line">Be it the gleam in a Meenakari artisan's eye in Rajasthan,</p>
+              <p class="poetry-line">Or the quiet rhythm of harvesters in Sikkim's fields.</p>
+
+              <div class="poetry-break"></div>
+
+              <p class="poetry-line">Every soul holds a story untold,</p>
+              <p class="poetry-line">Every hand, an art waiting to be embraced.</p>
+              <p class="poetry-line">In this tapestry of voices, colors, and crafts,</p>
+              <p class="poetry-line">We are woven together - living, breathing creators,</p>
+              <p class="poetry-line highlight">Boundless in our possibilities.</p>
+          </div>
+      </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="philosophy-section">
+      <div class="philosophy-content">
+          <p class="philosophy-text">
+              True understanding of the world comes through firsthand experiences - by immersing ourselves in new
+              places, cultures, and perspectives. Travel, at its core, is one of the most enriching and fulfilling
+              journeys life has to offer.
+          </p>
+
+          <p class="philosophy-text">
+              At the same time, reaching our fullest potential requires continuous learning - acquiring new skills,
+              expanding our knowledge, and striving towards personal and professional growth.
+          </p>
+
+          <p class="philosophy-text">
+              But what if we could seamlessly blend the two? What if travel and learning came together to create
+              transformative, well-rounded experiences that foster authentic growth?
+          </p>
+
+          <p class="philosophy-text">
+              That's exactly what we envision - a <span class="highlight-text">TRAVEL-AND-LEARN</span> collective of
+              like-minded explorers. Together, we cultivate meaningful experiences, develop valuable skills, revive  our rich culture and build a <span
+                  class="highlight-text">thriving community</span> filled with limitless opportunities.
+          </p>
+
+          <p class="philosophy-text">
+              Join us on this journey - where exploration meets growth, and where every step leads to a richer, more
+              fulfilling life.
+          </p>
+      </div>
+  </section>
+
+
+
+  
+  <!-- Founders Section -->
+  <section class="founders-section">
+<!-- .............. -->
+<!-- .............. -->
+<!-- .............. -->
+<!-- .............. -->
+
+    <!-- new div start here -->
+    <div id="founder-component-wrapper">
+    <style>
+        /* Define animation keyframes */
+        @keyframes slideUpFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* * NOTE: This body style is for demonstration. 
+         * You can remove it if your site already has a background.
+         * The component itself will work on any background.
+        */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #141E30; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #243B55, #141E30);
+            background: linear-gradient(to right, #243B55, #141E30);
+        }
+        
+        /* This wrapper ensures the component can be centered easily */
+        #founder-component-wrapper {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             padding: 3rem 1rem;
+             color: #f0f0f0;
+             font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Container to set perspective for 3D effect */
+        .founder-container {
+            width: 100%;
+            max-width: 1000px;
+            perspective: 1500px;
+        }
+
+        /* The Glassmorphism Card Effect */
+        .founder-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            padding: 3rem;
+            text-align: center;
+            /* Smooth transition for the 3D tilt effect */
+            transition: transform 0.2s ease-out;
+            transform-style: preserve-3d;
+        }
+
+        /* Layout for each block (text + image) */
+        .founder-block {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            text-align: left;
+            margin-bottom: 2rem;
+            opacity: 0; /* Initially hide for animation */
+        }
+        
+        /* Class to trigger animation */
+        .founder-block.is-visible {
+            animation: slideUpFadeIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+
+        .founder-text {
+            flex: 3;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .founder-image {
+            flex: 1;
+        }
+
+        .founder-text h2 {
+            font-size: 2.8rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .founder-text p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .founder-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Modifier class to reverse the layout (image on left) */
+        .founder-block.reverse-layout {
+            flex-direction: row-reverse;
+        }
+
+        /* The expandable content section */
+        .expandable-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.9s ease-in-out;
+        }
+
+        .expandable-content.show {
+            max-height: 1500px;
+        }
+
+        /* The Glassmorphism Button */
+        .know-more-btn {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            padding: 14px 35px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .know-more-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #founder-component-wrapper { padding: 1.5rem 1rem; }
+            .founder-card { padding: 2rem; }
+            .founder-block, .founder-block.reverse-layout {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .founder-text { text-align: center; }
+            .founder-text h2 { font-size: 2.2rem; }
+        }
+    </style>
+    
+    <!-- Combined Founders Section (replaces both components) -->
+    <div id="founders-combined-wrapper">
+      <style>
+        /* Container and card */
+    #founders-combined-wrapper { display:flex; justify-content:center; padding:3rem 1rem; color:#f0f0f0; font-family:'Montserrat',sans-serif; }
+    /* Scoped variables for consistent expanded image sizing */
+    #founders-combined-wrapper { --exp-img-w: 160px; --exp-img-h: 190px; }
+        .founders-container { width:100%; max-width:1100px; perspective:1200px; }
+        .founders-card { background:rgba(255,255,255,0.06); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); border-radius:28px; border:1px solid rgba(255,255,255,0.18); padding:2.5rem; box-shadow:0 10px 30px rgba(0,0,0,.35); transform-style:preserve-3d; transition:transform .12s ease-out; }
+
+                /* Title */
+                #founders-combined-wrapper .founders-title {
+                    font-family:'Montserrat',sans-serif;
+                    text-align:center;
+                    font-weight:800;
+                    font-size:clamp(44px, 6.2vw, 72px);
+                    line-height:1.15;
+                    margin:0 0 1.8rem;
+                    color:#ffffff;
+                    /* Override any global absolute positioning/gradient text styles */
+                    position: static;
+                    top:auto; right:auto; left:auto;
+                    padding-right:0;
+                    background:none;
+                    -webkit-background-clip: initial;
+                    background-clip: initial;
+                    -webkit-text-fill-color: currentColor;
+                }
+
+    /* Top floating images removed */
+    .founders-top-images { display:none; }
+    .founder-top-image { display:none; }
+    .founder-top-image img { display:none; }
+
+    /* Two independent columns (one per founder) */
+    .founders-columns { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:.5rem; align-items:start; }
+    .founder-column { display:flex; flex-direction:column; gap:1rem; }
+    .founder-profile { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); border-radius:16px; padding:1.2rem 1.2rem 1.4rem; box-shadow:0 6px 18px rgba(0,0,0,.25); display:grid; grid-template-columns:240px 1fr; gap:1rem 1.2rem; align-items:center; }
+    .founder-profile h3 { margin:.3rem 0 .5rem; font-size:1.6rem; font-weight:700; color:#e8eef2; text-align:left; grid-column:2; }
+    .founder-profile-image { width:100%; max-width:240px; height:280px; margin:0; overflow:hidden; border-radius:14px; box-shadow:0 8px 20px rgba(0,0,0,.25); grid-column:1; }
+    .founder-profile-image img { width:100%; height:100%; object-fit:cover; }
+    .founder-profile p { margin:0; font-size:1rem; line-height:1.65; color:rgba(255,255,255,.9); grid-column:2; }
+
+    /* Per-founder expandable content */
+    .founder-expandable { max-height:0; overflow:hidden; transition:max-height .9s ease-in-out; }
+    .founder-expanded-section { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); border-radius:16px; padding:1.1rem; display:grid; grid-template-columns:var(--exp-img-w) 1fr; gap:1rem; align-items:center; }
+    .founder-expanded-image { width:var(--exp-img-w); height:var(--exp-img-h); overflow:hidden; border-radius:12px; box-shadow:0 8px 18px rgba(0,0,0,.25); aspect-ratio: 160 / 190; }
+    .founder-expanded-image img { width:100%; height:100%; object-fit:cover; display:block; }
+        .founder-expanded-section p { margin:0; color:rgba(255,255,255,.92); line-height:1.7; }
+
+    /* Buttons */
+    .founders-know-more-btn { display:inline-block; margin:.25rem 0 0; align-self:flex-start; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.25); color:#fff; padding:12px 28px; border-radius:40px; font-weight:600; cursor:pointer; transition:transform .25s ease, background .25s ease; }
+        .founders-know-more-btn:hover { background:rgba(255,255,255,.25); transform:translateY(-2px); }
+
+        /* Mobile */
+                @media (max-width: 768px) {
+          .founders-card { padding:1.6rem; }
+          .founders-title { font-size:2.2rem; }
+          .founders-top-images { gap:.75rem; margin:-2.6rem .5rem .5rem; }
+          .founder-top-image { width:110px; height:110px; }
+                                .founders-columns { grid-template-columns:1fr; }
+                    .founder-profile { display:block; }
+                    .founder-profile h3, .founder-profile p { grid-column:auto; }
+                    .founder-profile-image { max-width:100%; height:230px; margin:0 0 .8rem; }
+                                .founder-expanded-section { grid-template-columns:1fr; }
+          .founder-expanded-image { width:100%; height:200px; }
+                    /* Ensure Chaitanya's initial portrait matches expanded image height on mobile */
+                    .founder-profile[data-founder="chaitanya"] .founder-profile-image { max-width:100%; width:100%; height:200px; }
+        }
+
+                        /* Make Roshni's initial portrait the same size as expanded thumbnails */
+                        .founder-profile[data-founder="roshni"] { grid-template-columns: var(--exp-img-w) 1fr; }
+                        .founder-profile[data-founder="roshni"] .founder-profile-image { max-width: var(--exp-img-w); width: var(--exp-img-w); height: var(--exp-img-h); }
+                        /* Make Chaitanya's initial portrait the same size as expanded thumbnails */
+                        .founder-profile[data-founder="chaitanya"] { grid-template-columns: var(--exp-img-w) 1fr; }
+                        .founder-profile[data-founder="chaitanya"] .founder-profile-image { max-width: var(--exp-img-w); width: var(--exp-img-w); height: var(--exp-img-h); }
+                                                /* Mobile override AFTER var-based rules to ensure full-width matches Creative tile */
+                                                @media (max-width: 768px) {
+                                                    .founder-profile[data-founder="chaitanya"] .founder-profile-image { max-width:100%; width:100%; height:200px; }
+                                                }
+      </style>
+
+      <section class="founders-container">
+        <div class="founders-card" id="foundersCard">
+          <h2 class="founders-title">Founders</h2>
+
+                    <!-- Top floating images removed as requested -->
+
+                    <!-- Columns with independent expand/collapse -->
+                    <div class="founders-columns">
+                        <!-- Left Column: Roshni -->
+                        <div class="founder-column" id="col-roshni">
+                            <div class="founder-profile" data-founder="roshni">
+                                <!-- <h3>Roshni</h3> -->
+                                <!-- <div class="founder-profile-image"><img src="images/founder2.png" alt="Roshni portrait"></div> -->
+                                <div class="founder-expanded-image"><img src="images/founder2.png" alt="Roshni work"></div>
+                                <p>Roshni has been passionate about classical dance, painting, and singing from a young age, immersing herself in various art forms that have shaped her creative mindset. Eager to pursue her love for the arts, she traveled to Singapore and the UK to study art and design.</p>
+                            </div>
+                            <button class="founders-know-more-btn founder-toggle" id="toggle-roshni" aria-expanded="false" aria-controls="expand-roshni">Know More</button>
+                            <div class="founder-expandable" id="expand-roshni">
+                                <div class="founder-expanded-section">
+                                    <div class="founder-expanded-image"><img src="images/founder4.png" alt="Roshni work"></div>
+                                    <p>Her studies encompass fine arts, design, media, and art therapy, and she works on numerous art and design projects. Additionally, Roshni expanded her knowledge of art therapy through an online course at the University of Florida and trained under Alex and Allyson Grey in chakra therapy during her travels across the US.</p>
+                                </div>
+                                <div class="founder-expanded-section" style="margin-top:1.25rem;">
+                                    <div class="founder-expanded-image"><img src="images/founder5.png" alt="Roshni vision"></div>
+                                    <p>Throughout her adult life, Roshni has dedicated herself to exploring the world and drawing inspiration from her experiences — believing the true value of learning lies in travel, understanding cultures, and learning from locals and their crafts.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Chaitanya -->
+                        <div class="founder-column" id="col-chaitanya">
+                            <div class="founder-profile" data-founder="chaitanya">
+                                <div class="founder-profile-image"><img src="https://placehold.co/400x450/243B55/FFFFFF?text=Co-Founder" alt="Chaitanya portrait"></div>
+                                <p>Chaitanya has spent the last 7+ years chasing stories with his camera across bustling cities, quiet villages, and faraway corners of the world. After studying Architecture & Cinema, he returned to India and launched his own production house.</p>
+                            </div>
+                            <button class="founders-know-more-btn founder-toggle" id="toggle-chaitanya" aria-expanded="false" aria-controls="expand-chaitanya">Know More</button>
+                            <div class="founder-expandable" id="expand-chaitanya">
+                                <div class="founder-expanded-section">
+                                    <div class="founder-expanded-image"><img src="https://placehold.co/400x450/141E30/FFFFFF?text=Creative" alt="Chaitanya creative"></div>
+                                    <p>He's worked with India's top production houses and trained under legendary photographers. He was part of an international filmmaking crew, directing an award-winning documentary with nominations in Los Angeles, Mexico, Zambia, India, and California.</p>
+                                </div>
+                                <div class="founder-expanded-section" style="margin-top:1.25rem;">
+                                    <div class="founder-expanded-image"><img src="https://placehold.co/400x450/2F4F4F/FFFFFF?text=Explorer" alt="Chaitanya explorer"></div>
+                                    <p>For Chaitanya, trekking, travelling, and storytelling are part of the same adventure. He aims to blend travel with learning, bringing together curious, creative people to explore, create, and leave every place a little better than they found it.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+            (function() {
+                const card = document.getElementById('foundersCard');
+                if (!card) return;
+
+                // 3D tilt for the entire combined card
+                card.addEventListener('mousemove', (e) => {
+                    const r = card.getBoundingClientRect();
+                    const x = e.clientX - r.left; const y = e.clientY - r.top;
+                    const cx = r.width/2; const cy = r.height/2;
+                    const rotX = (y - cy) / 25; const rotY = (cx - x) / 25;
+                    card.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+                });
+                card.addEventListener('mouseleave', () => { card.style.transform = 'rotateX(0deg) rotateY(0deg)'; });
+
+                // Independent expand/collapse per founder
+                const toggles = card.querySelectorAll('.founder-toggle');
+                toggles.forEach(btn => {
+                    const targetId = btn.getAttribute('aria-controls');
+                    const content = targetId ? document.getElementById(targetId) : null;
+                    if (!content) return;
+                    btn.addEventListener('click', () => {
+                        const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+                        if (isOpen) {
+                            content.style.maxHeight = '0px';
+                            btn.textContent = 'Know More';
+                            btn.setAttribute('aria-expanded', 'false');
+                        } else {
+                            content.style.maxHeight = content.scrollHeight + 'px';
+                            btn.textContent = 'Show Less';
+                            btn.setAttribute('aria-expanded', 'true');
+                        }
+                        // After expanding/collapsing, re-equalize heights
+                        requestAnimationFrame(equalizeAll);
+                        setTimeout(equalizeAll, 350); // after transition
+                    });
+                });
+
+                // Equalize heights of the two visible founder-profile cards on desktop
+                function equalizeFounderHeights() {
+                    try {
+                        const cols = card.querySelectorAll('.founder-profile');
+                        if (window.innerWidth < 768 || cols.length < 2) {
+                            cols.forEach(el => el.style.minHeight = '');
+                            return;
+                        }
+                        // Reset first
+                        cols.forEach(el => el.style.minHeight = '');
+                        let maxH = 0;
+                        cols.forEach(el => { maxH = Math.max(maxH, el.getBoundingClientRect().height); });
+                        cols.forEach(el => el.style.minHeight = maxH + 'px');
+                    } catch (e) { /* no-op */ }
+                }
+
+                // Equalize heights row-by-row for expanded sections across both columns
+                function equalizeExpandedRows() {
+                    try {
+                        if (window.innerWidth < 768) {
+                            // Clear any min-heights on mobile
+                            card.querySelectorAll('.founder-expanded-section').forEach(el => el.style.minHeight = '');
+                            return;
+                        }
+                        const left = card.querySelectorAll('#expand-roshni .founder-expanded-section');
+                        const right = card.querySelectorAll('#expand-chaitanya .founder-expanded-section');
+                        const maxLen = Math.max(left.length, right.length);
+                        // Reset first
+                        [...left, ...right].forEach(el => el && (el.style.minHeight = ''));
+                        for (let i = 0; i < maxLen; i++) {
+                            const L = left[i];
+                            const R = right[i];
+                            if (!L && !R) continue;
+                            if (L && R) {
+                                const h = Math.max(L.getBoundingClientRect().height, R.getBoundingClientRect().height);
+                                L.style.minHeight = h + 'px';
+                                R.style.minHeight = h + 'px';
+                            } else {
+                                // If only one exists at this index, clear to natural height
+                                if (L) L.style.minHeight = '';
+                                if (R) R.style.minHeight = '';
+                            }
+                        }
+                    } catch (e) { /* no-op */ }
+                }
+
+                function refreshOpenExpandables() {
+                    // Ensure any opened expandable has a max-height >= new scrollHeight
+                    card.querySelectorAll('.founder-expandable').forEach(panel => {
+                        const controller = card.querySelector(`[aria-controls="${panel.id}"]`);
+                        const isOpen = (controller && controller.getAttribute('aria-expanded') === 'true') || (panel.style.maxHeight && panel.style.maxHeight !== '0px');
+                        if (isOpen) {
+                            panel.style.maxHeight = panel.scrollHeight + 'px';
+                        }
+                    });
+                }
+
+                function equalizeAll() {
+                    equalizeFounderHeights();
+                    equalizeExpandedRows();
+                    refreshOpenExpandables();
+                }
+
+                // Run on load and resize
+                window.addEventListener('load', () => { equalizeAll(); setTimeout(refreshOpenExpandables, 200); });
+                window.addEventListener('resize', () => { equalizeAll(); setTimeout(refreshOpenExpandables, 200); });
+                // Also run after a short delay to catch font loading
+                setTimeout(() => { equalizeAll(); refreshOpenExpandables(); }, 150);
+
+                // Re-run after images load (thumbnails or portraits)
+                card.querySelectorAll('.founder-expanded-image img, .founder-profile-image img')
+                    .forEach(img => { if (!img.complete) img.addEventListener('load', () => setTimeout(equalizeAll, 50)); });
+            })();
+    </script>
+
+
+
+
+      <!-- <div class="founders-content">
+          <h2 class="founders-title">Founders</h2>
+
+          <div class="founder-story-block">
+              <div class="founder-main-bio">
+                  <img src="images/founder1.png" alt="Roshni - Main Profile" class="founder-main-image">
+                  <p class="founder-bio-paragraph">Roshni’s creative journey began early, rooted in classical dance, painting, and singing. She went on to earn a Doctorate in Kathak classical dance and explored art and design studies in Singapore and the UK. At 18, her first solo trip to the Netherlands sparked a lifelong love for travel. From then on, she made it a yearly ritual to set aside time and savings for travel whether the trips were big or small and covered several countries in the next few years.</p>
+                  <div class="founder-images-container">
+                      <img src="images/founder2.png" alt="Founder working on art" class="founder-secondary-image-right-top">
+                      <img src="images/founder3.png" alt="Founder dancing" class="founder-secondary-image-right-bottom">
+                  </div>
+              </div>
+          </div>
+
+          <div class="founder-story-block">
+              <div class="founder-secondary-layout image-left">
+                  <img src="images/founder4.png" alt="Founders together" class="founder-image-inline">
+
+                  
+                  <div class="founder-bio-text-container">
+                      <p class="founder-bio-paragraph">Her path blends fine arts, design, media, and marketing - designing for Bacardi NH7 Weekender, creating an ad film in Venezuela, representing Southeast Asia in a typography exhibition in Singapore, and collaborating with brands like YouTube, Flipkart, Tinder, Canva, Bacardi portfolio and more. Along the way, she deepened her practice in art therapy, including chakra therapy training with visionary artists Alex and Allyson Grey in the US.</p>
+                  </div>
+              </div>
+          </div>
+
+
+                      <div class="founder-story-block">
+              <div class="founder-main-bio">
+                  <p class="founder-bio-paragraph">For Roshni, travel is a living classroom. Every culture, craft, and conversation a lesson. Through The Expedition Collective, she’s building a space where exploration and creation come together, and where every journey leaves you transformed.</p>
+                  <img src="images/founder5.png" alt="Founder working on art" class="founder-secondary-image-right-top">
+                  
+              </div>
+          </div>
+
+      </div> -->
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+      <div class="footer-content">
+          <div class="footer-main">
+              <div class="footer-logo-section">
+                  <img src="images/TEC LOGOTYPE with tagline.png" alt="The Expedition Collective" class="footer-logo">
+              </div>
+              
+              <div class="footer-nav">
+                  <div class="footer-nav-group">
+                      <h4>Explore</h4>
+                      <ul>
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="who-we-are.html">Who We Are</a></li>
+                          <li><a href="upcoming.html">Upcoming Expeditions</a></li>
+                          <li><a href="ganga.html">Frames of the Ganges</a></li>
+                          <li><a href="connect.html">Connect</a></li>
+                      </ul>
+                  </div>
+                  
+                  <div class="footer-nav-group">
+                      <h4>Legal</h4>
+                      <ul>
+                      <li><a href="pdf/TEC Terms and Conditions 2025.pdf" target="_blank" rel="noopener noreferrer">Terms & Conditions</a></li>
+                      <li><a href="pdf/TEC Moral Code & Code of Conduct 2025.pdf" target="_blank" rel="noopener noreferrer">Moral Code & Conduct</a></li>
+                      <li><a href="pdf/TEC Privacy Policy 2025.pdf" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+                      </ul>
+                  </div>
+                  
+                  <div class="footer-nav-group">
+                      <h4>Connect</h4>
+                      <div class="footer-contact-info">
+                          <a href="mailto:info@expeditioncollective.in" class="email-link">
+                              info@expeditioncollective.in
+                          </a>
+                      </div>
+                      <ul class="social-icons-list">
+                          <li><a href="#" class="social-link">
+                              <svg class="social-icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                              </svg>
+                              <span>Instagram</span>
+                          </a></li>
+                          <li><a href="#" class="social-link">
+                              <svg class="social-icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                              </svg>
+                              <span>LinkedIn</span>
+                          </a></li>
+                          <li><a href="#" class="social-link">
+                              <svg class="social-icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 1.371.505 1.371.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                              </svg>
+                              <span>YouTube</span>
+                          </a></li>
+                          <li><a href="#" class="social-link">
+                              <svg class="social-icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                              </svg>
+                              <span>LinkedIn</span>
+                          </a></li>
+                          
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="footer-divider"></div>
+          
+          <div class="footer-bottom">
+              <div class="footer-copyright">
+                  <p>&copy; <span id="current-year"></span> The Expedition Collective. All rights reserved.</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="videoscript.js"></script>
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/68d425000e7378192a43e925/1j5ub12vl';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+
+</html>
