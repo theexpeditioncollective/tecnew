@@ -365,8 +365,8 @@
         .founders-know-more-btn:hover { background:rgba(255,255,255,.25); transform:translateY(-2px); }
 
         /* Mobile */
-                @media (max-width: 768px) {
-          .founders-card { padding:1.6rem; }
+            @media (max-width: 768px) {
+        .founders-card { padding:1.6rem; transform:none !important; transition:none !important; }
           .founders-title { font-size:2.2rem; }
           .founders-top-images { gap:.75rem; margin:-2.6rem .5rem .5rem; }
           .founder-top-image { width:110px; height:110px; }
@@ -449,15 +449,23 @@
                 const card = document.getElementById('foundersCard');
                 if (!card) return;
 
-                // 3D tilt for the entire combined card
-                card.addEventListener('mousemove', (e) => {
-                    const r = card.getBoundingClientRect();
-                    const x = e.clientX - r.left; const y = e.clientY - r.top;
-                    const cx = r.width/2; const cy = r.height/2;
-                    const rotX = (y - cy) / 25; const rotY = (cx - x) / 25;
-                    card.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
-                });
-                card.addEventListener('mouseleave', () => { card.style.transform = 'rotateX(0deg) rotateY(0deg)'; });
+                const enableTilt = window.matchMedia('(pointer: fine)').matches;
+
+                // 3D tilt for the entire combined card (desktop / fine pointers only)
+                if (enableTilt) {
+                    card.addEventListener('mousemove', (e) => {
+                        const r = card.getBoundingClientRect();
+                        const x = e.clientX - r.left; const y = e.clientY - r.top;
+                        const cx = r.width / 2; const cy = r.height / 2;
+                        const rotX = (y - cy) / 25; const rotY = (cx - x) / 25;
+                        card.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+                    });
+                    card.addEventListener('mouseleave', () => { card.style.transform = 'rotateX(0deg) rotateY(0deg)'; });
+                } else {
+                    card.style.transform = 'none';
+                    card.style.transformStyle = 'flat';
+                    card.style.transition = 'none';
+                }
 
                 // Independent expand/collapse per founder
                 const toggles = card.querySelectorAll('.founder-toggle');
