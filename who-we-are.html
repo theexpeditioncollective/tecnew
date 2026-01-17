@@ -36,8 +36,8 @@
                   <li><a href="index.html">Home</a></li>
                   <li><a href="who-we-are.html">Who We Are</a></li>
                   <li><a href="upcoming.html">Upcoming Expeditions</a></li>
-                  <li><a href="ganga.html">Frames of the Ganges</a></li>
                   <li><a href="connect.html">Connect</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
               </ul>
           </nav>
           <div class="social-icons">
@@ -68,7 +68,7 @@
               <a href="#" class="social-icon youtube">
                   <svg viewBox="0 0 24 24" fill="currentColor">
                       <path
-                          d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                          d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 1.371.505 1.371.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                   </svg>
               </a>
               <a href="#" class="social-icon tiktok">
@@ -146,428 +146,760 @@
       </div>
   </section>
 
-
-
-  
   <!-- Founders Section -->
   <section class="founders-section">
-<!-- .............. -->
-<!-- .............. -->
-<!-- .............. -->
-<!-- .............. -->
-
-    <!-- new div start here -->
-    <div id="founder-component-wrapper">
-    <style>
-        /* Define animation keyframes */
-        @keyframes slideUpFadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+    <div id="founders-modern-wrapper">
+      <style>
+        #founders-modern-wrapper {
+          padding: 5rem 2rem;
+          background: transparent;
+          position: relative;
+          overflow: hidden;
         }
 
-        /* * NOTE: This body style is for demonstration. 
-         * You can remove it if your site already has a background.
-         * The component itself will work on any background.
-        */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: #141E30; /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #243B55, #141E30);
-            background: linear-gradient(to right, #243B55, #141E30);
-        }
-        
-        /* This wrapper ensures the component can be centered easily */
-        #founder-component-wrapper {
-             display: flex;
-             justify-content: center;
-             align-items: center;
-             padding: 3rem 1rem;
-             color: #f0f0f0;
-             font-family: 'Montserrat', sans-serif;
+        /* Animated gradient background */
+        #founders-modern-wrapper::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: 
+            radial-gradient(ellipse at 30% 40%, rgba(163, 230, 53, 0.06) 0%, transparent 60%),
+            radial-gradient(ellipse at 70% 60%, rgba(56, 189, 248, 0.06) 0%, transparent 60%);
+          animation: gradientShift 20s ease-in-out infinite alternate;
+          pointer-events: none;
         }
 
-        /* Container to set perspective for 3D effect */
-        .founder-container {
-            width: 100%;
-            max-width: 1000px;
-            perspective: 1500px;
+        @keyframes gradientShift {
+          0% { transform: translate(0, 0) scale(1); }
+          100% { transform: translate(20px, -20px) scale(1.1); }
         }
 
-        /* The Glassmorphism Card Effect */
+        .founders-modern-title {
+          font-size: clamp(2.8rem, 5vw, 4rem);
+          font-weight: 800;
+          text-align: center;
+          margin: 0 0 3.5rem 0;
+          background: linear-gradient(120deg, #ffffff 0%, #a3e635 45%, #38bdf8 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          letter-spacing: -0.5px;
+          position: relative;
+          z-index: 2;
+          text-transform: uppercase;
+          font-family: 'Montserrat', sans-serif;
+        }
+
+        .founders-cards-container {
+          max-width: 1400px;
+          margin: 0 auto;
+          position: relative;
+          z-index: 2;
+        }
+
+        .founders-cards-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.35rem;
+          width: 100%;
+        }
+
         .founder-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-radius: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            padding: 3rem;
-            text-align: center;
-            /* Smooth transition for the 3D tilt effect */
-            transition: transform 0.2s ease-out;
-            transform-style: preserve-3d;
+          background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+          backdrop-filter: blur(20px) saturate(180%);
+          -webkit-backdrop-filter: blur(20px) saturate(180%);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 14px;
+          overflow: hidden;
+          cursor: pointer;
+          position: relative;
+          transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+          box-shadow: 
+            0 4px 20px rgba(0, 0, 0, 0.2),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
-        /* Layout for each block (text + image) */
-        .founder-block {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-            text-align: left;
-            margin-bottom: 2rem;
-            opacity: 0; /* Initially hide for animation */
-        }
-        
-        /* Class to trigger animation */
-        .founder-block.is-visible {
-            animation: slideUpFadeIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-        }
-
-        .founder-text {
-            flex: 3;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        /* Animated border gradient on hover */
+        .founder-card::before {
+          content: '';
+          position: absolute;
+          inset: -2px;
+          background: linear-gradient(135deg, 
+            transparent 0%, 
+            rgba(163, 230, 53, 0.4) 50%, 
+            rgba(56, 189, 248, 0.4) 100%);
+          border-radius: 14px;
+          opacity: 0;
+          transition: opacity 0.6s ease;
+          z-index: -1;
         }
 
-        .founder-image {
-            flex: 1;
+        .founder-card:hover::before {
+          opacity: 1;
         }
 
-        .founder-text h2 {
-            font-size: 2.8rem;
-            margin-top: 0;
-            margin-bottom: 1rem;
-            font-weight: 600;
+        .founder-card:hover {
+          transform: translateY(-12px);
+          box-shadow: 
+            0 20px 50px rgba(0, 0, 0, 0.4),
+            0 0 30px rgba(163, 230, 53, 0.15),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2);
+          border-color: rgba(163, 230, 53, 0.3);
         }
 
-        .founder-text p {
-            font-size: 1rem;
-            line-height: 1.7;
+        /* Image section with overlay gradient */
+        .founder-card-image-wrapper {
+          position: relative;
+          width: 100%;
+          height: 189px;
+          overflow: hidden;
         }
 
-        .founder-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
-            object-fit: cover;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        .founder-card-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
         }
 
-        /* Modifier class to reverse the layout (image on left) */
-        .founder-block.reverse-layout {
-            flex-direction: row-reverse;
+        .founder-card:hover .founder-card-image {
+          transform: scale(1.15);
         }
 
-        /* The expandable content section */
-        .expandable-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.9s ease-in-out;
+        /* Gradient overlay on image */
+        .founder-card-image-wrapper::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 60%;
+          background: linear-gradient(to top, 
+            rgba(0, 0, 0, 0.8) 0%, 
+            rgba(0, 0, 0, 0.4) 50%,
+            transparent 100%);
+          pointer-events: none;
+          transition: opacity 0.6s ease;
         }
 
-        .expandable-content.show {
-            max-height: 1500px;
+        .founder-card:hover .founder-card-image-wrapper::after {
+          opacity: 0.7;
         }
 
-        /* The Glassmorphism Button */
-        .know-more-btn {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 50px;
-            padding: 14px 35px;
-            color: #fff;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 1rem;
-            letter-spacing: 0.5px;
+        /* Content section */
+        .founder-card-content {
+          padding: 0.99rem 0.99rem 1.22rem;
+          position: relative;
         }
 
-        .know-more-btn:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-3px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        .founder-card-name {
+          font-size: 1.08rem;
+          font-weight: 700;
+          color: #ffffff;
+          margin: 0 0 0.23rem 0;
+          letter-spacing: 0.3px;
+          transition: color 0.3s ease;
+        }
+
+        .founder-card:hover .founder-card-name {
+          color: #a3e635;
+        }
+
+        .founder-card-role {
+          font-size: 0.54rem;
+          color: rgba(255, 255, 255, 0.6);
+          margin: 0 0 0.68rem 0;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          font-weight: 600;
+        }
+
+        .founder-card-description {
+          font-size: 0.65rem;
+          line-height: 1.6;
+          color: rgba(255, 255, 255, 0.8);
+          margin: 0 0 0.81rem 0;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        /* Call to action */
+        .founder-card-cta {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.36rem;
+          font-size: 0.59rem;
+          font-weight: 700;
+          color: #a3e635;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          transition: gap 0.3s ease;
+        }
+
+        .founder-card:hover .founder-card-cta {
+          gap: 0.54rem;
+        }
+
+        .founder-card-cta::after {
+          content: '→';
+          font-size: 1.1rem;
+          transition: transform 0.3s ease;
+        }
+
+        .founder-card:hover .founder-card-cta::after {
+          transform: translateX(3px);
+        }
+
+        /* Modal styles */
+        .founder-modal-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.88);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          z-index: 9999;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 2rem;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.4s ease;
+        }
+
+        .founder-modal-overlay.active {
+          opacity: 1;
+          pointer-events: all;
+        }
+
+        .founder-modal {
+          background: linear-gradient(145deg, rgba(30, 30, 45, 0.98), rgba(20, 20, 32, 0.98));
+          backdrop-filter: blur(40px) saturate(180%);
+          -webkit-backdrop-filter: blur(40px) saturate(180%);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          border-radius: 28px;
+          max-width: 900px;
+          width: 100%;
+          max-height: 85vh;
+          overflow-y: auto;
+          box-shadow: 
+            0 25px 100px rgba(0, 0, 0, 0.7),
+            0 0 60px rgba(163, 230, 53, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          transform: scale(0.85) translateY(40px);
+          opacity: 0;
+          transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+          position: relative;
+        }
+
+        .founder-modal-overlay.active .founder-modal {
+          transform: scale(1) translateY(0);
+          opacity: 1;
+        }
+
+        .founder-modal-close {
+          position: absolute;
+          top: 1.5rem;
+          right: 1.5rem;
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.08);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          color: #ffffff;
+          font-size: 1.6rem;
+          line-height: 1;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+          z-index: 10;
+        }
+
+        .founder-modal-close:hover {
+          background: rgba(255, 86, 86, 0.2);
+          border-color: rgba(255, 86, 86, 0.4);
+          transform: rotate(90deg);
+        }
+
+        .founder-modal-header {
+          padding: 2.5rem 2.5rem 2rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+          display: flex;
+          gap: 2rem;
+          align-items: center;
+        }
+
+        .founder-modal-image {
+          width: 140px;
+          height: 170px;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+          flex-shrink: 0;
+          border: 2px solid rgba(163, 230, 53, 0.2);
+        }
+
+        .founder-modal-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .founder-modal-header-text h2 {
+          font-size: 2.2rem;
+          font-weight: 800;
+          margin: 0 0 0.5rem 0;
+          background: linear-gradient(120deg, #ffffff 0%, #a3e635 50%, #38bdf8 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        .founder-modal-header-text p {
+          font-size: 0.9rem;
+          color: rgba(255, 255, 255, 0.6);
+          margin: 0;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-weight: 600;
+        }
+
+        .founder-modal-body {
+          padding: 2rem 2.5rem 2.5rem;
+        }
+
+        .founder-modal-section {
+          margin-bottom: 3rem;
+          opacity: 0;
+          transform: translateY(15px);
+          animation: fadeSlideUp 0.6s ease forwards;
+          display: grid;
+          grid-template-columns: 1fr 1.5fr;
+          gap: 2rem;
+          align-items: center;
+          background: rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          border-radius: 16px;
+          padding: 2rem;
+          transition: all 0.4s ease;
+        }
+
+        .founder-modal-section:hover {
+          background: rgba(255, 255, 255, 0.04);
+          border-color: rgba(163, 230, 53, 0.2);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .founder-modal-section:nth-child(1) { animation-delay: 0.1s; }
+        .founder-modal-section:nth-child(2) { 
+          animation-delay: 0.2s;
+          grid-template-columns: 1.5fr 1fr;
+        }
+        .founder-modal-section:nth-child(3) { animation-delay: 0.3s; }
+
+        /* Alternate image placement */
+        .founder-modal-section:nth-child(2) .founder-modal-section-image-container {
+          order: 2;
+        }
+
+        .founder-modal-section:nth-child(2) .founder-modal-section-text {
+          order: 1;
+        }
+
+        @keyframes fadeSlideUp {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .founder-modal-section-image-container {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .founder-modal-section-text {
+          width: 100%;
+        }
+
+        .founder-modal-section-image {
+          width: 100%;
+          height: 240px;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+          position: relative;
+          border: 2px solid rgba(163, 230, 53, 0.15);
+          transition: all 0.4s ease;
+        }
+
+        .founder-modal-section:hover .founder-modal-section-image {
+          border-color: rgba(163, 230, 53, 0.3);
+          box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .founder-modal-section-image::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(135deg, 
+            rgba(163, 230, 53, 0.1) 0%, 
+            transparent 50%,
+            rgba(56, 189, 248, 0.1) 100%);
+          opacity: 0;
+          transition: opacity 0.4s ease;
+        }
+
+        .founder-modal-section-image:hover::after {
+          opacity: 1;
+        }
+
+        .founder-modal-section-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.6s ease;
+        }
+
+        .founder-modal-section-image:hover img {
+          transform: scale(1.08);
+        }
+
+        .founder-modal-section p {
+          font-size: 1.05rem;
+          line-height: 1.8;
+          color: rgba(255, 255, 255, 0.9);
+          margin: 0;
+          text-align: justify;
+        }
+
+        /* Decorative accent for sections */
+        .founder-modal-section::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 4px;
+          height: 100%;
+          background: linear-gradient(180deg, #a3e635 0%, #38bdf8 100%);
+          border-radius: 16px 0 0 16px;
+          opacity: 0;
+          transition: opacity 0.4s ease;
+        }
+
+        .founder-modal-section:hover::before {
+          opacity: 1;
+        }
+
+        /* Custom scrollbar */
+        .founder-modal::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        .founder-modal::-webkit-scrollbar-track {
+          background: rgba(255, 255, 255, 0.03);
+          border-radius: 10px;
+        }
+
+        .founder-modal::-webkit-scrollbar-thumb {
+          background: rgba(163, 230, 53, 0.35);
+          border-radius: 10px;
+          border: 2px solid rgba(30, 30, 45, 0.5);
+        }
+
+        .founder-modal::-webkit-scrollbar-thumb:hover {
+          background: rgba(163, 230, 53, 0.5);
         }
 
         /* Responsive Design */
+        @media (max-width: 1024px) {
+          .founders-cards-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
         @media (max-width: 768px) {
-            #founder-component-wrapper { padding: 1.5rem 1rem; }
-            .founder-card { padding: 2rem; }
-            .founder-block, .founder-block.reverse-layout {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            .founder-text { text-align: center; }
-            .founder-text h2 { font-size: 2.2rem; }
-        }
-    </style>
-    
-    <!-- Combined Founders Section (replaces both components) -->
-    <div id="founders-combined-wrapper">
-      <style>
-        /* Container and card */
-    #founders-combined-wrapper { display:flex; justify-content:center; padding:3rem 1rem; color:#f0f0f0; font-family:'Montserrat',sans-serif; }
-    /* Scoped variables for consistent expanded image sizing */
-    #founders-combined-wrapper { --exp-img-w: 160px; --exp-img-h: 190px; }
-        .founders-container { width:100%; max-width:1100px; perspective:1200px; }
-        .founders-card { background:rgba(255,255,255,0.06); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); border-radius:28px; border:1px solid rgba(255,255,255,0.18); padding:2.5rem; box-shadow:0 10px 30px rgba(0,0,0,.35); transform-style:preserve-3d; transition:transform .12s ease-out; }
+          #founders-modern-wrapper {
+            padding: 3rem 1rem;
+          }
 
-                /* Title */
-                #founders-combined-wrapper .founders-title {
-                    font-family:'Montserrat',sans-serif;
-                    text-align:center;
-                    font-weight:800;
-                    font-size:clamp(44px, 6.2vw, 72px);
-                    line-height:1.15;
-                    margin:0 0 1.8rem;
-                    color:#ffffff;
-                    /* Override any global absolute positioning/gradient text styles */
-                    position: static;
-                    top:auto; right:auto; left:auto;
-                    padding-right:0;
-                    background:none;
-                    -webkit-background-clip: initial;
-                    background-clip: initial;
-                    -webkit-text-fill-color: currentColor;
-                }
+          .founders-modern-title {
+            font-size: 2.2rem;
+            margin-bottom: 2.5rem;
+          }
 
-    /* Top floating images removed */
-    .founders-top-images { display:none; }
-    .founder-top-image { display:none; }
-    .founder-top-image img { display:none; }
+          .founders-cards-grid {
+            grid-template-columns: 1fr;
+            gap: 1.35rem;
+          }
 
-    /* Two independent columns (one per founder) */
-    .founders-columns { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:.5rem; align-items:start; }
-    .founder-column { display:flex; flex-direction:column; gap:1rem; }
-    .founder-profile { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); border-radius:16px; padding:1.2rem 1.2rem 1.4rem; box-shadow:0 6px 18px rgba(0,0,0,.25); display:grid; grid-template-columns:240px 1fr; gap:1rem 1.2rem; align-items:center; }
-    .founder-profile h3 { margin:.3rem 0 .5rem; font-size:1.6rem; font-weight:700; color:#e8eef2; text-align:left; grid-column:2; }
-    .founder-profile-image { width:100%; max-width:240px; height:280px; margin:0; overflow:hidden; border-radius:14px; box-shadow:0 8px 20px rgba(0,0,0,.25); grid-column:1; }
-    .founder-profile-image img { width:100%; height:100%; object-fit:cover; }
-    .founder-profile p { margin:0; font-size:1rem; line-height:1.65; color:rgba(255,255,255,.9); grid-column:2; }
+          .founder-card-image-wrapper {
+            height: 176px;
+          }
 
-    /* Per-founder expandable content */
-    .founder-expandable { max-height:0; overflow:hidden; transition:max-height .9s ease-in-out; }
-    .founder-expanded-section { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); border-radius:16px; padding:1.1rem; display:grid; grid-template-columns:var(--exp-img-w) 1fr; gap:1rem; align-items:center; }
-    .founder-expanded-image { width:var(--exp-img-w); height:var(--exp-img-h); overflow:hidden; border-radius:12px; box-shadow:0 8px 18px rgba(0,0,0,.25); aspect-ratio: 160 / 190; }
-    .founder-expanded-image img { width:100%; height:100%; object-fit:cover; display:block; }
-        .founder-expanded-section p { margin:0; color:rgba(255,255,255,.92); line-height:1.7; }
+          .founder-modal {
+            border-radius: 20px;
+            max-height: 90vh;
+          }
 
-    /* Buttons */
-    .founders-know-more-btn { display:inline-block; margin:.25rem 0 0; align-self:flex-start; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.25); color:#fff; padding:12px 28px; border-radius:40px; font-weight:600; cursor:pointer; transition:transform .25s ease, background .25s ease; }
-        .founders-know-more-btn:hover { background:rgba(255,255,255,.25); transform:translateY(-2px); }
+          .founder-modal-header {
+            flex-direction: column;
+            text-align: center;
+            padding: 2rem 1.5rem 1.5rem;
+          }
 
-        /* Mobile */
-            @media (max-width: 768px) {
-        .founders-card { padding:1.6rem; transform:none !important; transition:none !important; }
-          .founders-title { font-size:2.2rem; }
-          .founders-top-images { gap:.75rem; margin:-2.6rem .5rem .5rem; }
-          .founder-top-image { width:110px; height:110px; }
-                                .founders-columns { grid-template-columns:1fr; }
-                    .founder-profile { display:block; }
-                    .founder-profile h3, .founder-profile p { grid-column:auto; }
-                    .founder-profile-image { max-width:100%; height:230px; margin:0 0 .8rem; }
-                                .founder-expanded-section { grid-template-columns:1fr; }
-          .founder-expanded-image { width:100%; height:200px; }
-                    /* Ensure Chaitanya's initial portrait matches expanded image height on mobile */
-                    .founder-profile[data-founder="chaitanya"] .founder-profile-image { max-width:100%; width:100%; height:200px; }
+          .founder-modal-image {
+            width: 120px;
+            height: 145px;
+          }
+
+          .founder-modal-header-text h2 {
+            font-size: 2rem;
+          }
+
+          .founder-modal-body {
+            padding: 1.5rem;
+          }
+
+          .founder-modal-section {
+            grid-template-columns: 1fr !important;
+            padding: 1.5rem;
+            gap: 1.5rem;
+          }
+
+          .founder-modal-section:nth-child(2) .founder-modal-section-image-container,
+          .founder-modal-section:nth-child(2) .founder-modal-section-text {
+            order: 0;
+          }
+
+          .founder-modal-section-image {
+            height: 200px;
+          }
         }
 
-                        /* Make Roshni's initial portrait the same size as expanded thumbnails */
-                        .founder-profile[data-founder="roshni"] { grid-template-columns: var(--exp-img-w) 1fr; }
-                        .founder-profile[data-founder="roshni"] .founder-profile-image { max-width: var(--exp-img-w); width: var(--exp-img-w); height: var(--exp-img-h); }
-                        /* Make Chaitanya's initial portrait the same size as expanded thumbnails */
-                        .founder-profile[data-founder="chaitanya"] { grid-template-columns: var(--exp-img-w) 1fr; }
-                        .founder-profile[data-founder="chaitanya"] .founder-profile-image { max-width: var(--exp-img-w); width: var(--exp-img-w); height: var(--exp-img-h); }
-                                                /* Mobile override AFTER var-based rules to ensure full-width matches Creative tile */
-                                                @media (max-width: 768px) {
-                                                    .founder-profile[data-founder="chaitanya"] .founder-profile-image { max-width:100%; width:100%; height:200px; }
-                                                }
+        @media (max-width: 480px) {
+          .founder-modal-section p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+          }
+        }
       </style>
 
-      <section class="founders-container">
-        <div class="founders-card" id="foundersCard">
-          <h2 class="founders-title">Founders</h2>
+      <h2 class="founders-modern-title">Founders</h2>
 
-                    <!-- Top floating images removed as requested -->
+      <div class="founders-cards-container">
+        <div class="founders-cards-grid">
+          <!-- Founder Card 1 - Roshni -->
+          <div class="founder-card" onclick="openFounderModal('roshni')">
+            <div class="founder-card-image-wrapper">
+              <img src="images/founder2.png" alt="Roshni" class="founder-card-image">
+            </div>
+            <div class="founder-card-content">
+              <h3 class="founder-card-name">Roshni</h3>
+              <p class="founder-card-role">Co-Founder</p>
+              <p class="founder-card-description">
+                Passionate about classical dance, painting, and singing from a young age, Roshni's creative journey spans art, design, and art therapy across continents.
+              </p>
+              <span class="founder-card-cta">Discover More</span>
+            </div>
+          </div>
 
-                    <!-- Columns with independent expand/collapse -->
-                    <div class="founders-columns">
-                        <!-- Left Column: Roshni -->
-                        <div class="founder-column" id="col-roshni">
-                            <div class="founder-profile" data-founder="roshni">
-                                <!-- <h3>Roshni</h3> -->
-                                <!-- <div class="founder-profile-image"><img src="images/founder2.png" alt="Roshni portrait"></div> -->
-                                <div class="founder-expanded-image"><img src="images/founder2.png" alt="Roshni work"></div>
-                                <p>Roshni has been passionate about classical dance, painting, and singing from a young age, immersing herself in various art forms that have shaped her creative mindset. Eager to pursue her love for the arts, she traveled to Singapore and the UK to study art and design.</p>
-                            </div>
-                            <button class="founders-know-more-btn founder-toggle" id="toggle-roshni" aria-expanded="false" aria-controls="expand-roshni">Know More</button>
-                            <div class="founder-expandable" id="expand-roshni">
-                                <div class="founder-expanded-section">
-                                    <div class="founder-expanded-image"><img src="images/founder4.png" alt="Roshni work"></div>
-                                    <p>Her studies encompass fine arts, design, media, and art therapy, and she works on numerous art and design projects. Additionally, Roshni expanded her knowledge of art therapy through an online course at the University of Florida and trained under Alex and Allyson Grey in chakra therapy during her travels across the US.</p>
-                                </div>
-                                <div class="founder-expanded-section" style="margin-top:1.25rem;">
-                                    <div class="founder-expanded-image"><img src="images/founder5.png" alt="Roshni vision"></div>
-                                    <p>Throughout her adult life, Roshni has dedicated herself to exploring the world and drawing inspiration from her experiences — believing the true value of learning lies in travel, understanding cultures, and learning from locals and their crafts.</p>
-                                </div>
-                            </div>
-                        </div>
+          <!-- Founder Card 2 - Chaitanya -->
+          <div class="founder-card" onclick="openFounderModal('chaitanya')">
+            <div class="founder-card-image-wrapper">
+              <img src="https://placehold.co/400x500/243B55/FFFFFF?text=Chaitanya" alt="Chaitanya" class="founder-card-image">
+            </div>
+            <div class="founder-card-content">
+              <h3 class="founder-card-name">Chaitanya</h3>
+              <p class="founder-card-role">Co-Founder</p>
+              <p class="founder-card-description">
+                With 7+ years chasing stories globally, Chaitanya blends architecture, cinema, and storytelling to create transformative travel experiences.
+              </p>
+              <span class="founder-card-cta">Discover More</span>
+            </div>
+          </div>
 
-                        <!-- Right Column: Chaitanya -->
-                        <div class="founder-column" id="col-chaitanya">
-                            <div class="founder-profile" data-founder="chaitanya">
-                                <div class="founder-profile-image"><img src="https://placehold.co/400x450/243B55/FFFFFF?text=Co-Founder" alt="Chaitanya portrait"></div>
-                                <p>Chaitanya has spent the last 7+ years chasing stories with his camera across bustling cities, quiet villages, and faraway corners of the world. After studying Architecture & Cinema, he returned to India and launched his own production house.</p>
-                            </div>
-                            <button class="founders-know-more-btn founder-toggle" id="toggle-chaitanya" aria-expanded="false" aria-controls="expand-chaitanya">Know More</button>
-                            <div class="founder-expandable" id="expand-chaitanya">
-                                <div class="founder-expanded-section">
-                                    <div class="founder-expanded-image"><img src="https://placehold.co/400x450/141E30/FFFFFF?text=Creative" alt="Chaitanya creative"></div>
-                                    <p>He's worked with India's top production houses and trained under legendary photographers. He was part of an international filmmaking crew, directing an award-winning documentary with nominations in Los Angeles, Mexico, Zambia, India, and California.</p>
-                                </div>
-                                <div class="founder-expanded-section" style="margin-top:1.25rem;">
-                                    <div class="founder-expanded-image"><img src="https://placehold.co/400x450/2F4F4F/FFFFFF?text=Explorer" alt="Chaitanya explorer"></div>
-                                    <p>For Chaitanya, trekking, travelling, and storytelling are part of the same adventure. He aims to blend travel with learning, bringing together curious, creative people to explore, create, and leave every place a little better than they found it.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <!-- Founder Card 3 - Our Team -->
+          <div class="founder-card" onclick="openFounderModal('team')">
+            <div class="founder-card-image-wrapper">
+              <img src="https://placehold.co/400x500/141E30/FFFFFF?text=Our+Team" alt="Our Team" class="founder-card-image">
+            </div>
+            <div class="founder-card-content">
+              <h3 class="founder-card-name">Our Team</h3>
+              <p class="founder-card-role">The Collective</p>
+              <p class="founder-card-description">
+                Behind every expedition is a dedicated team of creators, explorers, and storytellers working together to craft unforgettable experiences.
+              </p>
+              <span class="founder-card-cta">Discover More</span>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+
+      <!-- Modal Overlay -->
+      <div class="founder-modal-overlay" id="founderModal" onclick="closeFounderModalOnOverlay(event)">
+        <div class="founder-modal" id="modalContent">
+          <button class="founder-modal-close" onclick="closeFounderModal()">&times;</button>
+          <div id="modalBody">
+            <!-- Content dynamically inserted -->
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const founderData = {
+          roshni: {
+            name: 'Roshni',
+            role: 'Co-Founder',
+            image: 'images/founder2.png',
+            sections: [
+              {
+                text: "Roshni has been passionate about classical dance, painting, and singing from a young age, immersing herself in various art forms that have shaped her creative mindset. Eager to pursue her love for the arts, she traveled to Singapore and the UK to study art and design.",
+                images: []
+              },
+              {
+                text: "Her studies encompass fine arts, design, media, and art therapy, and she works on numerous art and design projects. Her path blends fine arts, design, media, and marketing - designing for Bacardi NH7 Weekender, creating an ad film in Venezuela, representing Southeast Asia in a typography exhibition in Singapore, and collaborating with brands like YouTube, Flipkart, Tinder, Canva, Bacardi portfolio and more.",
+                images: ['images/founder4.png']
+              },
+              {
+                text: "Additionally, Roshni expanded her knowledge of art therapy through an online course at the University of Florida and trained under Alex and Allyson Grey in chakra therapy during her travels across the US. Throughout her adult life, Roshni has dedicated herself to exploring the world and drawing inspiration from her experiences — believing the true value of learning lies in travel, understanding cultures, and learning from locals and their crafts.",
+                images: ['images/founder5.png']
+              }
+            ]
+          },
+          chaitanya: {
+            name: 'Chaitanya',
+            role: 'Co-Founder',
+            image: 'https://placehold.co/400x500/243B55/FFFFFF?text=Chaitanya',
+            sections: [
+              {
+                text: "Chaitanya has spent the last 7+ years chasing stories with his camera across bustling cities, quiet villages, and faraway corners of the world. After studying Architecture & Cinema, he returned to India and launched his own production house.",
+                images: []
+              },
+              {
+                text: "He's worked with India's top production houses and trained under legendary photographers. He was part of an international filmmaking crew, directing an award-winning documentary with nominations in Los Angeles, Mexico, Zambia, India, and California.",
+                images: ['https://placehold.co/400x500/141E30/FFFFFF?text=Creative+Work']
+              },
+              {
+                text: "For Chaitanya, trekking, travelling, and storytelling are part of the same adventure. He aims to blend travel with learning, bringing together curious, creative people to explore, create, and leave every place a little better than they found it.",
+                images: ['https://placehold.co/400x500/2F4F4F/FFFFFF?text=Explorer']
+              }
+            ]
+          },
+          team: {
+            name: 'Our Team',
+            role: 'The Collective',
+            image: 'https://placehold.co/400x500/141E30/FFFFFF?text=Our+Team',
+            sections: [
+              {
+                text: "The Expedition Collective is powered by a diverse group of passionate individuals - photographers, artists, educators, and cultural enthusiasts who share a common vision: to create meaningful travel experiences that transform lives.",
+                images: []
+              },
+              {
+                text: "Each team member brings unique expertise and perspective, from local guides who know every hidden gem, to workshop facilitators who inspire creativity, to logistics coordinators who ensure every detail is perfect.",
+                images: []
+              },
+              {
+                text: "Together, we work tirelessly to curate expeditions that go beyond tourism, fostering genuine connections with local communities and creating a space where exploration meets personal growth.",
+                images: []
+              }
+            ]
+          }
+        };
+
+        function openFounderModal(founderId) {
+          const modal = document.getElementById('founderModal');
+          const modalBody = document.getElementById('modalBody');
+          const founder = founderData[founderId];
+
+          if (!founder) return;
+
+          let sectionsHTML = '';
+          founder.sections.forEach(section => {
+            let imageHTML = '';
+            let textHTML = `<div class="founder-modal-section-text"><p>${section.text}</p></div>`;
+            
+            if (section.images && section.images.length > 0) {
+              imageHTML = '<div class="founder-modal-section-image-container">';
+              section.images.forEach(img => {
+                imageHTML += `
+                  <div class="founder-modal-section-image">
+                    <img src="${img}" alt="${founder.name}">
+                  </div>
+                `;
+              });
+              imageHTML += '</div>';
+              
+              sectionsHTML += `
+                <div class="founder-modal-section">
+                  ${imageHTML}
+                  ${textHTML}
+                </div>
+              `;
+            } else {
+              // If no image, show text only spanning full width
+              sectionsHTML += `
+                <div class="founder-modal-section" style="grid-template-columns: 1fr;">
+                  ${textHTML}
+                </div>
+              `;
+            }
+          });
+
+          modalBody.innerHTML = `
+            <div class="founder-modal-header">
+              <div class="founder-modal-image">
+                <img src="${founder.image}" alt="${founder.name}">
+              </div>
+              <div class="founder-modal-header-text">
+                <h2>${founder.name}</h2>
+                <p>${founder.role}</p>
+              </div>
+            </div>
+            <div class="founder-modal-body">
+              ${sectionsHTML}
+            </div>
+          `;
+
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeFounderModal() {
+          const modal = document.getElementById('founderModal');
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+
+        function closeFounderModalOnOverlay(event) {
+          if (event.target.id === 'founderModal') {
+            closeFounderModal();
+          }
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            closeFounderModal();
+          }
+        });
+      </script>
     </div>
+  </section>
 
-    <script>
-            (function() {
-                const card = document.getElementById('foundersCard');
-                if (!card) return;
-
-                const enableTilt = window.matchMedia('(pointer: fine)').matches;
-
-                // 3D tilt for the entire combined card (desktop / fine pointers only)
-                if (enableTilt) {
-                    card.addEventListener('mousemove', (e) => {
-                        const r = card.getBoundingClientRect();
-                        const x = e.clientX - r.left; const y = e.clientY - r.top;
-                        const cx = r.width / 2; const cy = r.height / 2;
-                        const rotX = (y - cy) / 25; const rotY = (cx - x) / 25;
-                        card.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
-                    });
-                    card.addEventListener('mouseleave', () => { card.style.transform = 'rotateX(0deg) rotateY(0deg)'; });
-                } else {
-                    card.style.transform = 'none';
-                    card.style.transformStyle = 'flat';
-                    card.style.transition = 'none';
-                }
-
-                // Independent expand/collapse per founder
-                const toggles = card.querySelectorAll('.founder-toggle');
-                toggles.forEach(btn => {
-                    const targetId = btn.getAttribute('aria-controls');
-                    const content = targetId ? document.getElementById(targetId) : null;
-                    if (!content) return;
-                    btn.addEventListener('click', () => {
-                        const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
-                        if (isOpen) {
-                            content.style.maxHeight = '0px';
-                            btn.textContent = 'Know More';
-                            btn.setAttribute('aria-expanded', 'false');
-                        } else {
-                            content.style.maxHeight = content.scrollHeight + 'px';
-                            btn.textContent = 'Show Less';
-                            btn.setAttribute('aria-expanded', 'true');
-                        }
-                        // After expanding/collapsing, re-equalize heights
-                        requestAnimationFrame(equalizeAll);
-                        setTimeout(equalizeAll, 350); // after transition
-                    });
-                });
-
-                // Equalize heights of the two visible founder-profile cards on desktop
-                function equalizeFounderHeights() {
-                    try {
-                        const cols = card.querySelectorAll('.founder-profile');
-                        if (window.innerWidth < 768 || cols.length < 2) {
-                            cols.forEach(el => el.style.minHeight = '');
-                            return;
-                        }
-                        // Reset first
-                        cols.forEach(el => el.style.minHeight = '');
-                        let maxH = 0;
-                        cols.forEach(el => { maxH = Math.max(maxH, el.getBoundingClientRect().height); });
-                        cols.forEach(el => el.style.minHeight = maxH + 'px');
-                    } catch (e) { /* no-op */ }
-                }
-
-                // Equalize heights row-by-row for expanded sections across both columns
-                function equalizeExpandedRows() {
-                    try {
-                        if (window.innerWidth < 768) {
-                            // Clear any min-heights on mobile
-                            card.querySelectorAll('.founder-expanded-section').forEach(el => el.style.minHeight = '');
-                            return;
-                        }
-                        const left = card.querySelectorAll('#expand-roshni .founder-expanded-section');
-                        const right = card.querySelectorAll('#expand-chaitanya .founder-expanded-section');
-                        const maxLen = Math.max(left.length, right.length);
-                        // Reset first
-                        [...left, ...right].forEach(el => el && (el.style.minHeight = ''));
-                        for (let i = 0; i < maxLen; i++) {
-                            const L = left[i];
-                            const R = right[i];
-                            if (!L && !R) continue;
-                            if (L && R) {
-                                const h = Math.max(L.getBoundingClientRect().height, R.getBoundingClientRect().height);
-                                L.style.minHeight = h + 'px';
-                                R.style.minHeight = h + 'px';
-                            } else {
-                                // If only one exists at this index, clear to natural height
-                                if (L) L.style.minHeight = '';
-                                if (R) R.style.minHeight = '';
-                            }
-                        }
-                    } catch (e) { /* no-op */ }
-                }
-
-                function refreshOpenExpandables() {
-                    // Ensure any opened expandable has a max-height >= new scrollHeight
-                    card.querySelectorAll('.founder-expandable').forEach(panel => {
-                        const controller = card.querySelector(`[aria-controls="${panel.id}"]`);
-                        const isOpen = (controller && controller.getAttribute('aria-expanded') === 'true') || (panel.style.maxHeight && panel.style.maxHeight !== '0px');
-                        if (isOpen) {
-                            panel.style.maxHeight = panel.scrollHeight + 'px';
-                        }
-                    });
-                }
-
-                function equalizeAll() {
-                    equalizeFounderHeights();
-                    equalizeExpandedRows();
-                    refreshOpenExpandables();
-                }
-
-                // Run on load and resize
-                window.addEventListener('load', () => { equalizeAll(); setTimeout(refreshOpenExpandables, 200); });
-                window.addEventListener('resize', () => { equalizeAll(); setTimeout(refreshOpenExpandables, 200); });
-                // Also run after a short delay to catch font loading
-                setTimeout(() => { equalizeAll(); refreshOpenExpandables(); }, 150);
-
-                // Re-run after images load (thumbnails or portraits)
-                card.querySelectorAll('.founder-expanded-image img, .founder-profile-image img')
-                    .forEach(img => { if (!img.complete) img.addEventListener('load', () => setTimeout(equalizeAll, 50)); });
-            })();
-    </script>
-
-
-
-
+  
       <!-- <div class="founders-content">
           <h2 class="founders-title">Founders</h2>
 
@@ -602,7 +934,614 @@
               </div>
           </div>
 
-      </div> -->
+  <!-- Founders Section -->
+  <section class="founders-section">
+    <div id="founders-modern-wrapper">
+      <style>
+        #founders-modern-wrapper {
+          padding: 4rem 2rem;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          overflow: hidden;
+        }
+
+        #founders-modern-wrapper::before {
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: 
+            radial-gradient(circle at 20% 20%, rgba(163, 230, 53, 0.08) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(56, 189, 248, 0.08) 0%, transparent 50%);
+          animation: gradientFloat 15s ease-in-out infinite;
+          pointer-events: none;
+        }
+
+        @keyframes gradientFloat {
+          0%, 100% { transform: translate(0, 0) rotate(0deg); }
+          50% { transform: translate(30px, -30px) rotate(180deg); }
+        }
+
+        .founders-modern-title {
+          font-size: clamp(2.5rem, 6vw, 4.5rem);
+          font-weight: 800;
+          text-align: center;
+          margin-bottom: 3rem;
+          background: linear-gradient(135deg, #ffffff 0%, #a3e635 40%, #38bdf8 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          letter-spacing: 1px;
+          position: relative;
+          z-index: 2;
+        }
+
+        .founders-cards-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+          max-width: 1400px;
+          width: 100%;
+          margin-bottom: 2rem;
+          position: relative;
+          z-index: 2;
+        }
+
+        .founder-card {
+          background: rgba(255, 255, 255, 0.04);
+          backdrop-filter: blur(30px) saturate(150%);
+          -webkit-backdrop-filter: blur(30px) saturate(150%);
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          border-radius: 24px;
+          padding: 0;
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+          transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+                      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .founder-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(135deg, 
+            rgba(163, 230, 53, 0.1) 0%, 
+            transparent 50%, 
+            rgba(56, 189, 248, 0.1) 100%);
+          opacity: 0;
+          transition: opacity 0.5s ease;
+          pointer-events: none;
+        }
+
+        .founder-card:hover::before {
+          opacity: 1;
+        }
+
+        .founder-card:hover {
+          transform: translateY(-10px) scale(1.02);
+          border-color: rgba(163, 230, 53, 0.3);
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4),
+                      0 0 40px rgba(163, 230, 53, 0.2),
+                      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        .founder-card-image {
+          width: 100%;
+          height: 350px;
+          overflow: hidden;
+          position: relative;
+        }
+
+        .founder-card-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .founder-card:hover .founder-card-image img {
+          transform: scale(1.1);
+        }
+
+        .founder-card-content {
+          padding: 1.5rem;
+          position: relative;
+        }
+
+        .founder-card-name {
+          font-size: 1.8rem;
+          font-weight: 700;
+          color: #ffffff;
+          margin: 0 0 0.5rem 0;
+          letter-spacing: 0.5px;
+        }
+
+        .founder-card-role {
+          font-size: 0.95rem;
+          color: rgba(255, 255, 255, 0.7);
+          margin: 0 0 1rem 0;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-weight: 500;
+        }
+
+        .founder-card-snippet {
+          font-size: 1rem;
+          line-height: 1.6;
+          color: rgba(255, 255, 255, 0.85);
+          margin: 0;
+        }
+
+        .founder-card-cta {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          margin-top: 1rem;
+          font-size: 0.9rem;
+          font-weight: 600;
+          color: #a3e635;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        .founder-card-cta::after {
+          content: '→';
+          font-size: 1.2rem;
+          transition: transform 0.3s ease;
+        }
+
+        .founder-card:hover .founder-card-cta::after {
+          transform: translateX(5px);
+        }
+
+        /* Modal Overlay */
+        .founder-modal-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.85);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          z-index: 9999;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 2rem;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.4s ease;
+        }
+
+        .founder-modal-overlay.active {
+          opacity: 1;
+          pointer-events: all;
+        }
+
+        .founder-modal {
+          background: rgba(24, 24, 36, 0.95);
+          backdrop-filter: blur(40px) saturate(180%);
+          -webkit-backdrop-filter: blur(40px) saturate(180%);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          border-radius: 32px;
+          max-width: 900px;
+          width: 100%;
+          max-height: 85vh;
+          overflow-y: auto;
+          box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6),
+                      0 0 60px rgba(163, 230, 53, 0.15),
+                      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          transform: scale(0.8) translateY(50px);
+          opacity: 0;
+          transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+          position: relative;
+        }
+
+        .founder-modal-overlay.active .founder-modal {
+          transform: scale(1) translateY(0);
+          opacity: 1;
+        }
+
+        .founder-modal-close {
+          position: absolute;
+          top: 1.5rem;
+          right: 1.5rem;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          color: #ffffff;
+          font-size: 1.5rem;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+          z-index: 10;
+        }
+
+        .founder-modal-close:hover {
+          background: rgba(255, 255, 255, 0.2);
+          transform: rotate(90deg);
+        }
+
+        .founder-modal-header {
+          padding: 3rem 3rem 2rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          display: flex;
+          gap: 2rem;
+          align-items: center;
+        }
+
+        .founder-modal-image {
+          width: 150px;
+          height: 180px;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+          flex-shrink: 0;
+        }
+
+        .founder-modal-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .founder-modal-header-text h2 {
+          font-size: 2.5rem;
+          font-weight: 800;
+          margin: 0 0 0.5rem 0;
+          background: linear-gradient(135deg, #ffffff 0%, #a3e635 50%, #38bdf8 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        .founder-modal-header-text p {
+          font-size: 1rem;
+          color: rgba(255, 255, 255, 0.7);
+          margin: 0;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+
+        .founder-modal-body {
+          padding: 2rem 3rem 3rem;
+        }
+
+        .founder-modal-section {
+          margin-bottom: 2.5rem;
+          opacity: 0;
+          transform: translateY(20px);
+          animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .founder-modal-section:nth-child(1) { animation-delay: 0.1s; }
+        .founder-modal-section:nth-child(2) { animation-delay: 0.2s; }
+        .founder-modal-section:nth-child(3) { animation-delay: 0.3s; }
+
+        @keyframes fadeInUp {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .founder-modal-section-images {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 1.5rem;
+          margin-top: 1.5rem;
+        }
+
+        .founder-modal-section-image {
+          width: 100%;
+          height: 220px;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+          position: relative;
+        }
+
+        .founder-modal-section-image::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+        }
+
+        .founder-modal-section-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.5s ease;
+        }
+
+        .founder-modal-section-image:hover img {
+          transform: scale(1.1);
+        }
+
+        .founder-modal-section p {
+          font-size: 1.05rem;
+          line-height: 1.8;
+          color: rgba(255, 255, 255, 0.9);
+          margin: 0 0 1rem 0;
+        }
+
+        /* Scrollbar styling */
+        .founder-modal::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        .founder-modal::-webkit-scrollbar-track {
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 10px;
+        }
+
+        .founder-modal::-webkit-scrollbar-thumb {
+          background: rgba(163, 230, 53, 0.3);
+          border-radius: 10px;
+        }
+
+        .founder-modal::-webkit-scrollbar-thumb:hover {
+          background: rgba(163, 230, 53, 0.5);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+          #founders-modern-wrapper {
+            padding: 3rem 1rem;
+          }
+
+          .founders-modern-title {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+          }
+
+          .founders-cards-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+          }
+
+          .founder-card-image {
+            height: 300px;
+          }
+
+          .founder-modal {
+            border-radius: 24px;
+            max-height: 90vh;
+          }
+
+          .founder-modal-header {
+            flex-direction: column;
+            text-align: center;
+            padding: 2rem 1.5rem 1.5rem;
+          }
+
+          .founder-modal-image {
+            width: 120px;
+            height: 140px;
+          }
+
+          .founder-modal-header-text h2 {
+            font-size: 2rem;
+          }
+
+          .founder-modal-body {
+            padding: 1.5rem;
+          }
+
+          .founder-modal-section-images {
+            grid-template-columns: 1fr;
+          }
+        }
+      </style>
+
+      <h2 class="founders-modern-title">Founders</h2>
+
+      <div class="founders-cards-grid">
+        <!-- Founder Card 1 - Roshni -->
+        <div class="founder-card" onclick="openFounderModal('roshni')">
+          <div class="founder-card-image">
+            <img src="images/founder2.png" alt="Roshni">
+          </div>
+          <div class="founder-card-content">
+            <h3 class="founder-card-name">Roshni</h3>
+            <p class="founder-card-role">Co-Founder</p>
+            <p class="founder-card-snippet">
+              Passionate about classical dance, painting, and singing from a young age, Roshni's creative journey spans art, design, and art therapy across continents.
+            </p>
+            <span class="founder-card-cta">Learn More</span>
+          </div>
+        </div>
+
+        <!-- Founder Card 2 - Chaitanya -->
+        <div class="founder-card" onclick="openFounderModal('chaitanya')">
+          <div class="founder-card-image">
+            <img src="https://placehold.co/400x500/243B55/FFFFFF?text=Chaitanya" alt="Chaitanya">
+          </div>
+          <div class="founder-card-content">
+            <h3 class="founder-card-name">Chaitanya</h3>
+            <p class="founder-card-role">Co-Founder</p>
+            <p class="founder-card-snippet">
+              With 7+ years chasing stories globally, Chaitanya blends architecture, cinema, and storytelling to create transformative travel experiences.
+            </p>
+            <span class="founder-card-cta">Learn More</span>
+          </div>
+        </div>
+
+        <!-- Founder Card 3 - Add third founder or leave as coming soon -->
+        <div class="founder-card" onclick="openFounderModal('team')">
+          <div class="founder-card-image">
+            <img src="https://placehold.co/400x500/141E30/FFFFFF?text=Our+Team" alt="Our Team">
+          </div>
+          <div class="founder-card-content">
+            <h3 class="founder-card-name">Our Team</h3>
+            <p class="founder-card-role">Collective</p>
+            <p class="founder-card-snippet">
+              Behind every expedition is a dedicated team of creators, explorers, and storytellers working together to craft unforgettable experiences.
+            </p>
+            <span class="founder-card-cta">Learn More</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Overlay -->
+      <div class="founder-modal-overlay" id="founderModal" onclick="closeFounderModalOnOverlay(event)">
+        <div class="founder-modal" id="modalContent">
+          <button class="founder-modal-close" onclick="closeFounderModal()">&times;</button>
+          <div id="modalBody">
+            <!-- Content will be dynamically inserted here -->
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const founderData = {
+          roshni: {
+            name: 'Roshni',
+            role: 'Co-Founder',
+            image: 'images/founder2.png',
+            sections: [
+              {
+                text: "Roshni has been passionate about classical dance, painting, and singing from a young age, immersing herself in various art forms that have shaped her creative mindset. Eager to pursue her love for the arts, she traveled to Singapore and the UK to study art and design.",
+                images: []
+              },
+              {
+                text: "Her studies encompass fine arts, design, media, and art therapy, and she works on numerous art and design projects. Her path blends fine arts, design, media, and marketing - designing for Bacardi NH7 Weekender, creating an ad film in Venezuela, representing Southeast Asia in a typography exhibition in Singapore, and collaborating with brands like YouTube, Flipkart, Tinder, Canva, Bacardi portfolio and more.",
+                images: ['images/founder4.png']
+              },
+              {
+                text: "Additionally, Roshni expanded her knowledge of art therapy through an online course at the University of Florida and trained under Alex and Allyson Grey in chakra therapy during her travels across the US. Throughout her adult life, Roshni has dedicated herself to exploring the world and drawing inspiration from her experiences — believing the true value of learning lies in travel, understanding cultures, and learning from locals and their crafts.",
+                images: ['images/founder5.png']
+              }
+            ]
+          },
+          chaitanya: {
+            name: 'Chaitanya',
+            role: 'Co-Founder',
+            image: 'https://placehold.co/400x500/243B55/FFFFFF?text=Chaitanya',
+            sections: [
+              {
+                text: "Chaitanya has spent the last 7+ years chasing stories with his camera across bustling cities, quiet villages, and faraway corners of the world. After studying Architecture & Cinema, he returned to India and launched his own production house.",
+                images: []
+              },
+              {
+                text: "He's worked with India's top production houses and trained under legendary photographers. He was part of an international filmmaking crew, directing an award-winning documentary with nominations in Los Angeles, Mexico, Zambia, India, and California.",
+                images: ['https://placehold.co/400x500/141E30/FFFFFF?text=Creative+Work']
+              },
+              {
+                text: "For Chaitanya, trekking, travelling, and storytelling are part of the same adventure. He aims to blend travel with learning, bringing together curious, creative people to explore, create, and leave every place a little better than they found it.",
+                images: ['https://placehold.co/400x500/2F4F4F/FFFFFF?text=Explorer']
+              }
+            ]
+          },
+          team: {
+            name: 'Our Team',
+            role: 'The Collective',
+            image: 'https://placehold.co/400x500/141E30/FFFFFF?text=Our+Team',
+            sections: [
+              {
+                text: "The Expedition Collective is powered by a diverse group of passionate individuals - photographers, artists, educators, and cultural enthusiasts who share a common vision: to create meaningful travel experiences that transform lives.",
+                images: []
+              },
+              {
+                text: "Each team member brings unique expertise and perspective, from local guides who know every hidden gem, to workshop facilitators who inspire creativity, to logistics coordinators who ensure every detail is perfect.",
+                images: []
+              },
+              {
+                text: "Together, we work tirelessly to curate expeditions that go beyond tourism, fostering genuine connections with local communities and creating a space where exploration meets personal growth.",
+                images: []
+              }
+            ]
+          }
+        };
+
+        function openFounderModal(founderId) {
+          const modal = document.getElementById('founderModal');
+          const modalBody = document.getElementById('modalBody');
+          const founder = founderData[founderId];
+
+          if (!founder) return;
+
+          let sectionsHTML = '';
+          founder.sections.forEach(section => {
+            let imagesHTML = '';
+            if (section.images && section.images.length > 0) {
+              imagesHTML = '<div class="founder-modal-section-images">';
+              section.images.forEach(img => {
+                imagesHTML += `
+                  <div class="founder-modal-section-image">
+                    <img src="${img}" alt="${founder.name}">
+                  </div>
+                `;
+              });
+              imagesHTML += '</div>';
+            }
+
+            sectionsHTML += `
+              <div class="founder-modal-section">
+                <p>${section.text}</p>
+                ${imagesHTML}
+              </div>
+            `;
+          });
+
+          modalBody.innerHTML = `
+            <div class="founder-modal-header">
+              <div class="founder-modal-image">
+                <img src="${founder.image}" alt="${founder.name}">
+              </div>
+              <div class="founder-modal-header-text">
+                <h2>${founder.name}</h2>
+                <p>${founder.role}</p>
+              </div>
+            </div>
+            <div class="founder-modal-body">
+              ${sectionsHTML}
+            </div>
+          `;
+
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeFounderModal() {
+          const modal = document.getElementById('founderModal');
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+
+        function closeFounderModalOnOverlay(event) {
+          if (event.target.id === 'founderModal') {
+            closeFounderModal();
+          }
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            closeFounderModal();
+          }
+        });
+      </script>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -620,8 +1559,8 @@
                           <li><a href="index.html">Home</a></li>
                           <li><a href="who-we-are.html">Who We Are</a></li>
                           <li><a href="upcoming.html">Upcoming Expeditions</a></li>
-                          <li><a href="ganga.html">Frames of the Ganges</a></li>
                           <li><a href="connect.html">Connect</a></li>
+                          <li><a href="faq.html">FAQ</a></li>
                       </ul>
                   </div>
                   
@@ -650,7 +1589,7 @@
                           </a></li>
                           <li><a href="#" class="social-link">
                               <svg class="social-icon-svg" viewBox="0 0 24 24" fill="currentColor">
-                                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                               </svg>
                               <span>LinkedIn</span>
                           </a></li>
@@ -684,19 +1623,6 @@
 
   <script src="script.js"></script>
   <script src="videoscript.js"></script>
-  <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/68d425000e7378192a43e925/1j5ub12vl';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 
 </body>
 

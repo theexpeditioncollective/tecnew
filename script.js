@@ -526,12 +526,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 })
 
-// Course card click handler for Ganga page
+// Course card click handlers
 document.addEventListener("DOMContentLoaded", () => {
   const gangaCard = document.querySelector('.course-card[data-bg="frames"]')
   if (gangaCard) {
     gangaCard.addEventListener("click", () => {
       window.location.href = "ganga.html"
+    })
+  }
+
+  const majuliCard = document.querySelector('.course-card[data-bg="majuli"]')
+  if (majuliCard) {
+    majuliCard.addEventListener("click", () => {
+      window.location.href = "majuli.html"
     })
   }
 })
@@ -901,3 +908,118 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 })
 
+// ================================
+// Join TEC Tribe Popup Functionality
+// ================================
+document.addEventListener('DOMContentLoaded', () => {
+  const openPopupBtn = document.getElementById('openJoinPopup');
+  const closePopupBtn = document.getElementById('closeTribePopup');
+  const popupOverlay = document.getElementById('tribePopupOverlay');
+  const popupForm = document.querySelector('.tribe-popup-form');
+
+  // Open popup
+  if (openPopupBtn) {
+    openPopupBtn.addEventListener('click', () => {
+      popupOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      
+      // Trigger typewriter animation for the badge
+      const badge = document.querySelector('.tribe-seats-badge');
+      if (badge) {
+        // Reset animation
+        badge.classList.remove('typing');
+        badge.style.width = '0';
+        // Trigger animation after a short delay
+        setTimeout(() => {
+          badge.classList.add('typing');
+        }, 300);
+      }
+    });
+  }
+
+  // Close popup function
+  const closePopup = () => {
+    popupOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  };
+
+  // Close popup on close button click
+  if (closePopupBtn) {
+    closePopupBtn.addEventListener('click', closePopup);
+  }
+
+  // Close popup on overlay click (outside the form)
+  if (popupOverlay) {
+    popupOverlay.addEventListener('click', (e) => {
+      if (e.target === popupOverlay) {
+        closePopup();
+      }
+    });
+  }
+
+  // Close popup on ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
+      closePopup();
+    }
+  });
+
+  // Form validation and submission
+  if (popupForm) {
+    popupForm.addEventListener('submit', (e) => {
+      const nameInput = document.getElementById('tribe-name');
+      const emailInput = document.getElementById('tribe-email');
+      const phoneInput = document.getElementById('tribe-phone');
+
+      // Basic validation
+      let isValid = true;
+
+      if (!nameInput.value.trim()) {
+        isValid = false;
+        nameInput.style.borderColor = '#ef4444';
+      } else {
+        nameInput.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+      }
+
+      if (!emailInput.value.trim() || !emailInput.value.includes('@')) {
+        isValid = false;
+        emailInput.style.borderColor = '#ef4444';
+      } else {
+        emailInput.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+      }
+
+      if (!phoneInput.value.trim()) {
+        isValid = false;
+        phoneInput.style.borderColor = '#ef4444';
+      } else {
+        phoneInput.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+      }
+
+      if (!isValid) {
+        e.preventDefault();
+        return;
+      }
+
+      // If form is valid, it will submit normally to FormSubmit
+      // The form will redirect to thank-you page as configured
+    });
+
+    // Clear error styling on input
+    const inputs = popupForm.querySelectorAll('.tribe-input');
+    inputs.forEach(input => {
+      input.addEventListener('input', () => {
+        input.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+      });
+
+      input.addEventListener('focus', () => {
+        input.style.borderColor = '#a3e635';
+      });
+
+      input.addEventListener('blur', () => {
+        if (!input.value.trim() && input.hasAttribute('required')) {
+          input.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+        }
+      });
+    });
+  }
+});
