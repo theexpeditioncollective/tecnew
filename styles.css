@@ -2821,6 +2821,17 @@ body {
   .instructor-content {
     grid-template-columns: 1fr; /* Stack columns on smaller screens */
     gap: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .instructor-section.reverse-layout .instructor-content {
+    grid-template-columns: 1fr; /* Stack on mobile */
+  }
+
+  /* Image first for reverse layout on mobile */
+  .instructor-section.reverse-layout .instructor-image-section {
+    order: -1; /* Move image above text */
   }
 
   .instructor-image-section {
@@ -2829,9 +2840,12 @@ body {
 
   .instructor-info {
     height: auto; /* Allow height to adjust on smaller screens */
-    margin-left: 0; /* Remove negative margin on single column layout */
+    margin-left: 0 !important; /* Remove negative margin on single column layout */
+    margin-right: 0 !important; /* Remove negative margin on reverse layout */
     margin-top: 0; /* Reset margin-top for stacked layout */
     padding: 30px; /* Adjust padding for smaller screens */
+    width: 100%; /* Ensure it doesn't overflow container */
+    box-sizing: border-box; /* Include padding in width calculation */
   }
 
   .instructor-name {
@@ -2854,6 +2868,10 @@ body {
     padding: 80px 0;
   }
 
+  .instructor-container {
+    padding: 0 15px; /* Reduce horizontal padding on smaller screens */
+  }
+
   .instructor-content {
     gap: 30px;
   }
@@ -2862,9 +2880,13 @@ body {
     height: 250px;
   }
 
+  .instructor-info {
+    padding: 24px; /* Reduce padding further on smaller screens */
+  }
+
   .instructor-name {
-    font-size: clamp(28px, 6vw, 36px);
-    margin-bottom: 30px;
+    font-size: clamp(24px, 6vw, 32px);
+    margin-bottom: 20px;
   }
 
   .instructor-bio {
@@ -2878,8 +2900,31 @@ body {
 }
 
 @media (max-width: 480px) {
+  .instructor-container {
+    padding: 0 10px; /* Further reduce padding on very small screens */
+  }
+
   .instructor-image-section {
     height: 200px;
+  }
+
+  .instructor-info {
+    padding: 20px; /* Even less padding on very small screens */
+  }
+
+  .instructor-subtitle {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .instructor-name {
+    font-size: clamp(20px, 5vw, 28px);
+    margin-bottom: 15px;
+  }
+
+  .instructor-specialty {
+    font-size: 13px;
+    margin-bottom: 10px;
   }
 
   .instructor-bio {
@@ -2890,6 +2935,11 @@ body {
   .achievement-item {
     margin-bottom: 10px; /* Further reduced for very small screens */
     font-size: 12px; /* Further reduced for very small screens */
+    padding-left: 16px; /* Reduce left padding for bullet */
+  }
+
+  .achievement-item::before {
+    font-size: 14px; /* Slightly smaller bullet */
   }
 }
 
@@ -6849,6 +6899,43 @@ html {
 
 @media (max-width: 768px) {
     .toc-section {
+        padding: 28px 20px;
+    }
+
+    .toc-content {
+        gap: 24px;
+        flex-direction: column;
+    }
+
+    .toc-label {
+        font-size: 10px;
+        letter-spacing: 2.5px;
+        width: 100%;
+        margin-bottom: 4px;
+    }
+
+    .toc-links {
+        width: 100%;
+        gap: 8px 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .toc-link {
+        font-size: 13.5px;
+        padding: 6px 0;
+        white-space: nowrap;
+    }
+
+    .toc-link::before {
+        left: -8px;
+        width: 3px;
+        height: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .toc-section {
         padding: 24px 15px;
     }
 
@@ -6857,23 +6944,17 @@ html {
     }
 
     .toc-label {
-        font-size: 10px;
+        font-size: 9px;
         letter-spacing: 2px;
-        width: 100%;
     }
 
     .toc-links {
-        width: 100%;
-        gap: 16px;
-        justify-content: flex-start;
+        gap: 6px 16px;
     }
 
     .toc-link {
-        font-size: 14px;
-    }
-
-    .toc-link::before {
-        left: -8px;
+        font-size: 12.5px;
+        padding: 5px 0;
     }
 }
 
