@@ -543,27 +543,31 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 })
 
-// Upcoming page: make the "Frames of the Ganges" expedition card clickable to ganga.html
+// Upcoming page: make expedition cards clickable
 document.addEventListener("DOMContentLoaded", () => {
   if (!document.body.classList.contains("upcoming-page")) return
-  const framesExpeditionCard = document.querySelector('.expedition-card[data-expedition="frames"]')
-  if (!framesExpeditionCard) return
 
-  const goToGanga = () => {
-    window.location.href = "ganga.html"
+  const wireCardLink = (selector, url) => {
+    const card = document.querySelector(selector)
+    if (!card) return
+
+    const go = () => {
+      window.location.href = url
+    }
+
+    card.addEventListener("click", go)
+    card.setAttribute("role", "link")
+    card.setAttribute("tabindex", "0")
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault()
+        go()
+      }
+    })
   }
 
-  // Click support
-  framesExpeditionCard.addEventListener("click", goToGanga)
-  // Accessibility: Enter/Space support
-  framesExpeditionCard.setAttribute("role", "link")
-  framesExpeditionCard.setAttribute("tabindex", "0")
-  framesExpeditionCard.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault()
-      goToGanga()
-    }
-  })
+  wireCardLink('.expedition-card[data-expedition="unmask"]', "majuli.html")
+  wireCardLink('.expedition-card[data-expedition="frames"]', "ganga.html")
 })
 
 // Join us button click handler
