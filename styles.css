@@ -76,13 +76,14 @@ time, mark, audio, video, input, textarea, select, button {
   color: #fff;
   border-radius: 12px;
   padding: 28px 56px;
-  min-width: 400px;
+  min-width: auto;
   max-width: 540px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.12);
   display: flex;
   align-items: center;
   gap: 16px;
   font-size: 1.1rem;
+  flex: 1;
 }
 
 .connect-direct-card i, .connect-direct-card svg {
@@ -2217,7 +2218,7 @@ body {
 }
 
 .ganga-subtitle {
-  font-size: clamp(12px, 1.8vw, 14px);
+  font-size: clamp(14px, 2.5vw, 20px);
   font-weight: 400;
   letter-spacing: 3px;
   margin-top: -230px; /* Removed problematic negative margin */
@@ -2627,6 +2628,54 @@ body {
   .day-item {
     font-size: 12px;
   }
+}
+
+/* Itinerary Download Section */
+.download-details {
+  background: #f7f7f7;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.download-details__content {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.download-details__content p {
+  margin: 0;
+  font-size: 18px;
+  color: #222222;
+  font-weight: 500;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.download-btn:hover {
+  background: #111111;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.download-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 /* Majuli Mentors Wrapper - Common Background */
@@ -3545,14 +3594,16 @@ body {
 /* Form container */
 .join-us-form-container {
   background: white;
-  padding: 8px 28px;
+  padding: 20px;
   font-size: 1rem;
   font-weight: 600;
   gap: 8px;
   margin-top: 14px;
   letter-spacing: 0.3px;
-  min-width: 80px;
-  min-height: 32px;
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Form title */
@@ -5107,6 +5158,10 @@ Modern Reset Button
   .connect-right-panel {
     padding: 50px 40px;
   }
+
+  .connect-form-wrapper {
+    max-width: 100%;
+  }
   
   .input-grid {
     grid-template-columns: 1fr;
@@ -5132,6 +5187,15 @@ Modern Reset Button
   .feature-text p {
     font-size: 13px;
   }
+
+  .connect-direct-cards {
+    flex-wrap: wrap;
+  }
+
+  .connect-direct-card {
+    flex: 1;
+    min-width: 250px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -5142,6 +5206,18 @@ Modern Reset Button
   .connect-left-panel,
   .connect-right-panel {
     padding: 40px 25px;
+  }
+
+  .connect-direct-cards {
+    gap: 24px;
+    padding: 0 20px;
+  }
+
+  .connect-direct-card {
+    padding: 20px 24px;
+    font-size: 1rem;
+    flex-direction: column;
+    text-align: center;
   }
   
   .connect-left-panel {
@@ -5251,21 +5327,37 @@ Modern Reset Button
     font-size: 11px;
   }
   
+  .connect-form-wrapper {
+    padding: 25px;
+    border-radius: 16px;
+  }
+
   .form-header {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
   
   .form-title {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 8px;
   }
   
   .form-subtitle {
-    font-size: 13px;
+    font-size: 12px;
   }
   
   .modern-contact-form {
-    gap: 18px;
+    gap: 16px;
+  }
+
+  .connect-direct-cards {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 15px;
+  }
+
+  .connect-direct-card {
+    padding: 16px 20px;
+    font-size: 0.95rem;
   }
   
   .quick-contact-section {
